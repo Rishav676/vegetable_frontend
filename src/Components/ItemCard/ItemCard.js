@@ -1,12 +1,18 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../../store/actions/cart';
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
+toast.configure();
 
 function ItemCard(props) {
   const dispatch = useDispatch();
   const cart = useSelector(state => state.cart);
   const add = () => {
     dispatch(addToCart(props._id)); 
+    toast.success("Successfully added to cart");
+
   }
   return (
     <div className="col-12 col-lg-6 d-flex">
@@ -27,7 +33,7 @@ function ItemCard(props) {
         </div>
         <div className="pb-4 entity-content">
           <h4 className="entity-title">
-            <a className="content-link" href="shop-product-sidebar-right.html">{props.name}</a>
+           {props.name}
           </h4>
           <div className="entity-price">
             <span className="currency">&#8377;</span>{props.price}
