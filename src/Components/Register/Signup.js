@@ -35,7 +35,7 @@ function Signup() {
     e.preventDefault();
     const { firstName, lastName, userName, email, password, confirmPassword, address, city, zip, phone } = userRegisterin;
 
-    const res = await fetch("https://vegetable-store-backend.herokuapp.com/users/register", {
+    const res = await fetch("https://veg-back.herokuapp.com/users/register", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

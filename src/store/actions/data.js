@@ -28,7 +28,7 @@ export const loadingFalse = () => {
 export const asyncfetchData = () => {
     return (dispatch) => {
         dispatch(loadingTrue());
-        axios.get("https://vegetable-store-backend.herokuapp.com/sabzi")
+        axios.get("https://veg-back.herokuapp.com/sabzi")
             .then(response => {
                 const data = response.data;
                 dispatch(fetchData(data));

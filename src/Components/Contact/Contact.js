@@ -25,7 +25,7 @@ function Contact() {
     const token = localStorage.getItem("access_token");
     const { name, email, message } = feedback;
 
-    const res = await fetch("https://vegetable-store-backend.herokuapp.com/users/contact", {
+    const res = await fetch("https://veg-back.herokuapp.com/users/contact", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',

@@ -11,7 +11,7 @@ function Dashboard() {
 
   useEffect(async () => {
     const token = localStorage.getItem("access_token");
-    await fetch("https://vegetable-store-backend.herokuapp.com/users/verifykro", {
+    await fetch("https://veg-back.herokuapp.com/users/verifykro", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

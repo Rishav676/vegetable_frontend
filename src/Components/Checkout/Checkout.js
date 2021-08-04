@@ -30,7 +30,7 @@ function Checkout() {
     checkToken();
     async function checkToken() {
       const token = localStorage.getItem("access_token");
-      await fetch("https://vegetable-store-backend.herokuapp.com/users/verifykro", {
+      await fetch("https://veg-back.herokuapp.com/users/verifykro", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +52,7 @@ function Checkout() {
     e.preventDefault();
     console.log(cartArray);
     const { _id, firstName, lastName, email, password, confirmPassword, address, city, zip, phone } = userUpdatein;
-    fetch("https://vegetable-store-backend.herokuapp.com/sabzi/order/" + _id, {
+    fetch("https://veg-back.herokuapp.com/sabzi/order/" + _id, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

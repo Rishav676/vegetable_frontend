@@ -25,7 +25,7 @@ function Login() {
     e.preventDefault();
     const { email, password } = userSignin;
 
-    const res = await fetch("https://vegetable-store-backend.herokuapp.com/users/login", {
+    const res = await fetch("https://veg-back.herokuapp.com/users/login", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

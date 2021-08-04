@@ -13,7 +13,7 @@ function Order() {
         fetchData();
         async function fetchData() {
             const token = localStorage.getItem("access_token");
-            await fetch("https://vegetable-store-backend.herokuapp.com/users/verifykro", {
+            await fetch("https://veg-back.herokuapp.com/users/verifykro", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
@@ -32,7 +32,7 @@ function Order() {
         fetchData();
         async function fetchData() {
             console.log("YEAH");
-            const res = await axios.get("https://vegetable-store-backend.herokuapp.com/users/" + id);
+            const res = await axios.get("https://veg-back.herokuapp.com/users/" + id);
             console.log("YPP", res.data);
             setOrder(res.data);
         }
